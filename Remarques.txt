@@ -1,0 +1,21 @@
+Utilisez des photos professionnels
+Supprimez l'arrière plan du logo
+Revoir l'animation sur le CTA "PRENDRE UN RENDEZ-VOUS"
+
+Header
+	Utilisez des margins stricts
+
+Résoudre les images étirés
+
+Inclure des marges aux endroits nécessaires.
+Redundance des éléments de la page de localisation sur la page de contacts (La page de localisation peut être supprimé)
+
+
+Admin
+Mettre les écrits qui sont en noir sur le fond sombre en blanc
+Les formulaires disposant de peu de champs peuvent être transformés en modale
+List des newsletters ou liste des abonnés à la newsletter
+Pourquoi le design des boutons d'actions changent d'une page à l'autre (manque d'uniformité)
+
+Email automatique pour envoyer des notifications aux abonnés chaque mois de la liste des abonnées
+Un modal à chaque rafraîchissement de la page
