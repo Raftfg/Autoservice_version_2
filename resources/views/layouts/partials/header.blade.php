@@ -26,10 +26,10 @@
 
         
         <!-- Site Icons -->
-        <link rel="shortcut icon" href="{{asset('assets/autoimages/logoremo.png')}}" type="image/x-icon"> 
+        <link rel="shortcut icon" href="{{asset('assets/autoimages/logoremo.png')}}" type="image/x-icon" style=" object-fit: cover;"> 
        
 
-        <link rel="apple-touch-icon" href="{{asset('assets/autoimages/logoremo.png')}}">
+        <link rel="apple-touch-icon" href="{{asset('assets/autoimages/logoremo.png')}}" style=" object-fit: cover;">
         <!-- Bootstrap CSS -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">

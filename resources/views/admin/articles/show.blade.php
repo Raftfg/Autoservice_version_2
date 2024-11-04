@@ -2,69 +2,61 @@
 @section('contenu')
 @include('layouts.partials.sidebar')
     <!-- Start All Title Box -->
-    <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>EQUIPE</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/accueil">Accueil</a></li>
-                        <li class="breadcrumb-item active">EQUIPE</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- End All Title Box -->
+    <!-- Start Contact Us  -->
+    <div class="all-title-box">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h2>Détail Article</h2>
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/accueil">Accueil</a></li>
+                      <li class="breadcrumb-item active">Détail Article</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="contact-box-main py-5" style="background-color: #f9f9f9;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                  <div class="contact-form-right">
+                      <div class="container">
+                          <div class="row justify-content-center">
+                              <div class="col-md-10">
+                                  
+                                  <div class="article-detail bg-white p-4 rounded shadow-sm" style="border: 1px solid #ddd;">
+                                      <!-- Titre de l'article -->
+                                      <h1 class="font-weight-bold" style="font-family: 'Roboto', sans-serif; font-size: 28px; color: #222; margin-bottom: 15px;">{{ $article->titre }}</h1>
+                                      
+                                      <!-- Image de l'article -->
+                                      <div class="article-image mb-4">
+                                          <img src="{{ asset('articles/' . $article->photo) }}" alt="{{ $article->titre }}" class="img-fluid rounded" style="width: 100%; height: 400px; object-fit: cover; border: 1px solid #ccc;">
+                                      </div>
+                                      
+                                      <!-- Contenu de l'article -->
+                                      <div class="article-content" style="font-size: 16px; line-height: 1.8; color: #555;">
+                                          <p style="text-align: justify;">{{ $article->contenu }}</p>
+                                      </div>
+                                      
+                                      <!-- Bouton Retour -->
+                                      <div class="text-center mt-4">
+                                          <a href="{{ url()->previous() }}" class="btn btn-secondary" style="font-size: 16px; padding: 10px 20px; font-weight: 500;">&larr; Retour</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>     
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    <!-- End Cart -->
 
-    <!-- Start About Page  -->
-    <div class="about-box-main">
-        <div class="container">
-            <div class="row my-4">
-                <div class="col-12">
-                    <h2 class="noo-sh-title">Rencontrez notre équipe </h2>
-                </div>
-                @forelse ($equipes as $equipe)
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="hover-team">
-                            <div class="our-team"> 
-                                <img src="{{asset("equipes/" . $equipe->avatar)}}" alt="" class="img_insta" />
-                                <div class="team-content">
-                                    <h3 class="title">{{ $equipe->nom }} {{ $equipe->prenom }}</h3>
-                                    <span class="post">{{ $equipe->role }}</span>
-                                </div>
-                                <ul class="social">
-                                    <li>
-                                        <a target="_blank" href="{{ $equipe->facebook }}" class="fab fa-facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://wa.me/{{ $equipe->whatsApp }}?text=Hello,+I+am+interested+in+knowing+more+about+your +WhatsApp+API+service." class="fab fa-whatsapp"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{{ $equipe->gmail }}" class="fab fa-google-plus"></a>
-                                    </li>
-                                    
-                                </ul>
-                                <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                            </div>
-                            <div class="team-description">
-                                <p class="text-justify " style="font-weight: bold;">{{ $equipe->description }}</p>
-                            </div>
-                            <hr class="my-0">
-                        </div>
-                    </div>
-                @empty
-                    <div col-sm-12 col-lg-12>
-                        <p>Aucun membre dans l'équipe pour le moment</p>
-                    </div>
-                @endforelse
-            </div>
-           
-        </div>
-    </div>
-    <!-- End About Page -->
-
-   <!-- Start Instagram Feed  -->
+    <!-- Start Instagram Feed  -->
 <div class="instagram-box">
     <div class="main-instagram owl-carousel owl-theme">
         <div class="item">
@@ -152,4 +144,3 @@
 <!-- End Instagram Feed  -->
     @include('layouts.partials.footer')
     @endsection
-

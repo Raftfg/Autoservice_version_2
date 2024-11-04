@@ -49,10 +49,7 @@
                             <div class="type-lb">
                                 {{-- <p class="sale">Sale</p> --}}
                             </div>
-                            <img src="{{asset('assets/autoimages/dia2.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/dia2.jpg')}}" class="img-fluid  img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -68,10 +65,7 @@
                 <div class="col-lg-3 col-md-6 special-grid fruits">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/cli3.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/cli3.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -86,10 +80,7 @@
                 <div class="col-lg-3 col-md-6 special-grid bulbs">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/dia.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            " >
+                            <img src="{{asset('assets/autoimages/dia.jpg')}}" class="img-fluid img_insta" alt="Image"  >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -104,10 +95,7 @@
                 <div class="col-lg-3 col-md-6 special-grid fruits">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/cli2.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/cli2.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -121,10 +109,7 @@
 				<div class="col-lg-3 col-md-6 special-grid bulbs">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/dia1.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/dia1.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -139,10 +124,7 @@
                 <div class="col-lg-3 col-md-6 special-grid fruits">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/cli1.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/cli1.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -157,10 +139,7 @@
                 <div class="col-lg-3 col-md-6 special-grid podded-vegetables">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/vid4.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/vid4.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -175,10 +154,7 @@
                 <div class="col-lg-3 col-md-6 special-grid root-and-tuberous">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/liq1.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/liq1.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -193,10 +169,7 @@
 				<div class="col-lg-3 col-md-6 special-grid root-and-tuberous">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/liq2.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/liq2.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -211,10 +184,7 @@
                 <div class="col-lg-3 col-md-6 special-grid podded-vegetables">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/vid2.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/vid2.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -229,10 +199,7 @@
                 <div class="col-lg-3 col-md-6 special-grid root-and-tuberous">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/liq3.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/liq3.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -247,10 +214,7 @@
                 <div class="col-lg-3 col-md-6 special-grid podded-vegetables">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('assets/autoimages/vid1.jpg')}}" class="img-fluid" alt="Image" style="
-                            width : 400px;
-                            height : 200px;
-                            ">
+                            <img src="{{asset('assets/autoimages/vid1.jpg')}}" class="img-fluid img_insta" alt="Image" >
                             {{-- <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>

@@ -73,7 +73,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-                <a class="navbar-brand" href="/accueil"><img src="{{asset('assets/autoimages/logoremo.png')}}" class="logo" alt="" style="max-height:70px; margin-right:6px;"></a>
+                <a class="navbar-brand" href="/accueil"><img src="{{asset('assets/autoimages/logoremo.png')}}" class="logo" alt="" style="max-height:70px; margin-right:6px; object-fit: cover;"></a>
             </div>
             <!-- End Header Navigation -->
 

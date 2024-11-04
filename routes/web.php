@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,11 @@ Route::post('/rendezvousform', [SiteController::class, 'rendezvousform'])->name(
 
 //devis
 Route::get('/devis', [SiteController::class, 'devis'])->name('devis');
+
+// routes/web.php
+Route::get('/articles/{id}', [ArticlesController::class, 'show'])->name('articles.show');
+
+
 
 //contactez-nous
 Route::get('/contacteznous', [SiteController::class, 'contacteznous'])->name('contacteznous');

@@ -5,7 +5,7 @@
 <div id="slides-shop" class="cover-slides">
     <ul class="slides-container">
         <li class="text-center">
-            <img src="{{asset('assets/autoimages/img3.jpg')}}" alt="">
+            <img src="{{asset('assets/autoimages/img3.jpg')}}" alt="" style=" object-fit: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -17,7 +17,7 @@
             </div>
         </li>
         <li class="text-center">
-            <img src="{{asset('assets/autoimages/v11.jpg')}}" alt="">
+            <img src="{{asset('assets/autoimages/v11.jpg')}}" alt="" style=" object-fit: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -30,7 +30,7 @@
             </div>
         </li>
         <li class="text-center">
-            <img src="{{asset('assets/autoimages/v10.jpg')}}" alt="">
+            <img src="{{asset('assets/autoimages/v10.jpg')}}" alt="" style=" object-fit: cover;">
             
             <div class="container">
                 <div class="row">
@@ -54,7 +54,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="banner-frame"> <img class="img-fluid" src="{{asset('assets/autoimages/img33.jpg')}}" alt="" />
+                <div class="banner-frame"> <img class="img-fluid" src="{{asset('assets/autoimages/img33.jpg')}}" alt="" style=" object-fit: cover;" />
                 </div>
             </div>
             <div class="col-lg-6">
@@ -197,9 +197,9 @@
             <div class="col-xl-5 col-lg-5 col-md-6">
                 <div id="carousel-example-1" class="single-product-slider carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="First slide"> </div>
-                        <div class="carousel-item"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="Second slide"> </div>
-                        <div class="carousel-item"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="Third slide"> </div>
+                        <div class="carousel-item active"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="First slide" style=" object-fit: cover;"> </div>
+                        <div class="carousel-item"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="Second slide" style=" object-fit: cover;"> </div>
+                        <div class="carousel-item"> <img class="d-block w-100" src="{{asset('assets/autoimages/img44.jpg')}}" alt="Third slide" style=" object-fit: cover;"> </div>
                     </div>
                     <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>

@@ -38,4 +38,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/rendez_vous',Rendez_vousController::class);
     Route::resource('/admin/parametres',ParametresController::class);
     Route::resource('/admin/services_photo',ServicesPhotoController::class);
+    
+
 });

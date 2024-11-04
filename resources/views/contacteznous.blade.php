@@ -20,7 +20,7 @@
     <div class="contact-box-main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-sm-12">
+                <div class="col-lg-12 col-sm-12">
                     <div class="contact-form-right">
                         <h2>ENTRER EN CONTACT AVEC NOUS</h2>
                              <p>POUR TOUTES AUTRES QUESTIONS, CONTACTEZ-NOUS DÈS MAINTENANT EN COMPLÉTANT CE FORMULAIRE</p>
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom complet">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom complet" required >
                                         @if ($errors->has('name'))
                                         <p class="alert alert-danger">{{ $errors->first('name')}}</p>
                                       @endif
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="email" placeholder="Votre email" id="email" class="form-control" name="email">
+                                        <input type="email" placeholder="Votre email" id="email" class="form-control" name="email" required>
 
                                         @if ($errors->has('email'))
                                         <p class="alert alert-danger">{{ $errors->first('email')}}</p>
@@ -46,7 +46,7 @@
                                 </div>
                                  <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="numero" placeholder="Votre numero" id="numero" class="form-control"  name="numero" value="" size="40">
+                                        <input type="numero" placeholder="Votre numero" id="numero" class="form-control"  name="numero" value="" size="40" required>
 
                                         @if ($errors->has('numero'))
                                         <p class="alert alert-danger">{{ $errors->first('numero')}}</p>
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="suggestion" placeholder="Suggestion" >
+                                        <input type="text" class="form-control" id="subject" name="suggestion" placeholder="Suggestion" required>
 
                                         @if ($errors->has('suggestion'))
                                         <p class="alert alert-danger">{{ $errors->first('suggestion')}}</p>
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="message" name="message" placeholder="Votre Message" rows="4" ></textarea>
+                                        <textarea class="form-control" id="message" name="message" placeholder="Votre Message" rows="4" required></textarea>
 
                                         @if ($errors->has('message'))
                                         <p class="alert alert-danger">{{ $errors->first('message')}}</p>
@@ -80,7 +80,7 @@
                         </form>
                     </div>
                 </div>
-				<div class="col-lg-4 col-sm-12">
+				 <!--<div class="col-lg-4 col-sm-12">
                     <div class="contact-info-left">
 
                         <h2>AUTO SERVICE LA PATIENCE</h2>
@@ -102,7 +102,7 @@
                         <h2>LOCALISATION ET ITINÉRAIRE</h2>
                         <a href="https://maps.app.goo.gl/TfymXXy1M81SE9s6A" target="_blank"><img src="{{ asset('assets/images/localisation.png') }}" alt="Photo de localisation" width="310" ></a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
