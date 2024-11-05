@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\CommandesController;
 use App\Http\Controllers\Admin\FormationsController;
 use App\Http\Controllers\Admin\ParametresController;
-use App\Http\Controllers\Admin\NewslettersController;
 use App\Http\Controllers\Admin\Rendez_vousController;
 use App\Http\Controllers\Admin\UtilisateursController;
 use App\Http\Controllers\Admin\ServicesPhotoController;
@@ -33,7 +32,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/formations',FormationsController::class);
     Route::resource('/admin/equipes',EquipesController::class);
     Route::resource('/admin/articles',ArticlesController::class);
-    Route::resource('/admin/newsletters',NewslettersController::class);
     Route::resource('/admin/services',ServicesController::class);
     Route::resource('/admin/rendez_vous',Rendez_vousController::class);
     Route::resource('/admin/parametres',ParametresController::class);

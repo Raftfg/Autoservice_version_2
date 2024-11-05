@@ -464,9 +464,10 @@
         <div class="modal-contentM">
             <div class="contentM">
                 <span onclick="closeModal()" class="close">&times;</span> <br>
-                <form action="" method="POST">
+                <form action="{{ route('newsletters.store') }}" method="POST">
                     @csrf
-                    <p class="intro">Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, offres spéciales et bien plus encore, directement dans votre boîte mail !</p>
+                    <p class="intro">Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, offres
+                        spéciales et bien plus encore, directement dans votre boîte mail !</p>
                     <div class="groupe">
                         <input class="inpu" type="email" name="email" placeholder=" " required>
                         <label for="email" class="labe">Entrez votre email :</label>
@@ -561,11 +562,11 @@
         }
 
         .intro {
-        font-size: 0.8rem;
-        color: #555;
-        margin-bottom: 0.6rem;
-        text-align: center;
-    }
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
 
         .close {
             position: absolute;
@@ -597,7 +598,7 @@
                 padding: 0.5rem;
                 border: none;
                 color: #ffffff;
-                font-size:0.8rem;
+                font-size: 0.8rem;
                 cursor: pointer;
             }
         }
@@ -615,6 +616,89 @@
         window.onload = function() {
             setTimeout(openModal, 1000);
         };
+    </script>
+
+
+    <!-- Toast Container -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <style>
+        /* Style du toast */
+        .toast {
+            visibility: hidden;
+            min-width: 300px;
+            background-color: #fff;
+            color: #333;
+            text-align: left;
+            border-left: 6px solid;
+            border-radius: 4px;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            z-index: 1001;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        /* Style d'affichage du toast */
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.hide {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        /* Couleurs de bordure pour les types de toast */
+        .toast.success {
+            border-color: #28a745;
+            /* Vert pour le succès */
+            color: #28a745;
+        }
+
+        .toast.error {
+            border-color: #dc3545;
+            /* Rouge pour l'erreur */
+            color: #dc3545;
+        }
+    </style>
+
+    <script>
+        // Fonction pour afficher le toast avec un message et un type (success ou error)
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById("toast");
+            const toastMessage = document.getElementById("toast-message");
+
+            // Applique le type (success ou error) pour la couleur de bordure
+            toast.classList.add(type === 'success' ? 'success' : 'error');
+            toastMessage.textContent = message;
+
+            // Affiche le toast
+            toast.classList.add("show");
+            toast.classList.remove("hide");
+
+            // Cache le toast après 3 secondes
+            setTimeout(() => {
+                toast.classList.add("hide");
+                setTimeout(() => {
+                    toast.classList.remove("show", "success", "error");
+                }, 500);
+            }, 5000);
+        }
+
+        // Vérifie s'il y a un message de succès ou d'erreur dans la session
+        @if (session('success'))
+            showToast("{{ session('success') }}", 'success');
+        @elseif (session('error'))
+            showToast("{{ session('error') }}", 'error');
+        @endif
     </script>
 
     @include('layouts.partials.footer')

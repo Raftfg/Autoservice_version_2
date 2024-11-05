@@ -17,7 +17,6 @@ class NewslettersController extends Controller
     {
         $letter = Newsletters::all();
         return view('admin.newsletters.index', compact('letter'));
-        
     }
 
     /**
@@ -38,10 +37,26 @@ class NewslettersController extends Controller
      */
     public function store(Request $request)
     {
-        $letter = Newsletters::create([
-            'email' => $request->mail
+        $request->validate([
+            'email' => 'required|email',
         ]);
-        return redirect()->route('newsletters.index');
+
+        $email = $request->input('email');
+        $existingEmail = Newsletters::where('email', $email)->first();
+
+        if ($existingEmail) {
+            return redirect()->back()->with('error', ' Email déjà inscrit !');
+        }
+
+        try {
+            Newsletters::create([
+                'email' => $email,
+            ]);
+
+            return redirect()->back()->with('success', 'Inscription effectuée avec succès !');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Une erreur est survenue. Veuillez réessayer.');
+        }
     }
 
     /**
