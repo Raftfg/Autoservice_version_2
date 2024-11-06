@@ -43,6 +43,7 @@
                 <div class="col-md-6">
                     <label for="service" class="form-label">Service<span style="color: red">*</span> </label>
                     <select name="service" required aria-placeholder="Veuillez selectionner le service" id="service" class="form-control">
+                        <option value="" disabled selected>Sélectionner un service</option> <!-- Option par défaut -->
                         @foreach ($service as $var)
                         <option value="{{$var->id}}">{{$var->designation}}</option>
                         @endforeach
@@ -50,6 +51,13 @@
                             <p>{{ $errors->first('service')}}</p>
                         @endif
                     </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="description" class="form-label">Description<span style="color: red">*</span> </label>
+                    <input type="text" class="form-control" required id="description" name="description">
+                    @if ($errors->has('description'))
+                        <p>{{ $errors->first('description')}}</p>
+                    @endif
                 </div>
                
                 <div class="text-center">

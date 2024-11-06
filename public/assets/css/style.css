@@ -493,6 +493,13 @@ ul.cart-list>li.total>.btn {
         position: relative;
         top: -2px;
     }
+    /* Taille du logo pour les écrans mobiles */
+    @media (max-width: 768px) {
+        nav.navbar .navbar-brand img.logo {
+            width: 120px;
+            /* Ajustez cette valeur pour le mobile */
+        }
+    }
     nav.navbar .navbar-brand img.logo {
         width: 160px;
     }
@@ -951,12 +958,62 @@ ul.cart-list>li.total>.btn:hover {
 .cover-slides h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 64px;
+    font-size: 90px;
     color: #fff;
 }
 
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid orange;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    width: fit-content;
+    font-size: 2em;
+    width: auto;
+    /* Permet au texte de prendre la largeur nécessaire */
+    /* Limite la largeur à 100% */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .typing {
+        font-size: 1.5em;
+        /* Réduit la taille sur mobile pour éviter la coupure */
+        width: auto;
+        /* Laisse la largeur s'adapter sur mobile */
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+
+/* Centrer tout le contenu dans le conteneur */
+
+
+/*.container {
+    text-align: center;
+}*/
+
 .cover-slides p {
-    font-size: 18px;
+    font-size: 24px;
     color: #fff;
     padding-bottom: 30px;
 }
@@ -1057,19 +1114,20 @@ ul.cart-list>li.total>.btn:hover {
 
 /*------------------------------------------------------------------ Products -------------------------------------------------------------------*/
 
-.title-all {
-    margin-bottom: 30px;
-}
+
+/* Style de la section principale */
 
 .title-all h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #000000;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .title-all p {
-    color: #999999;
-    font-size: 16px;
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 10px;
 }
 
 .products-box {
@@ -1590,6 +1648,9 @@ ul.cart-list>li.total>.btn:hover {
 
 /*------------------------------------------------------------------ Footer Main -------------------------------------------------------------------*/
 
+
+/*------------------------------------------------------------------ Footer Main -------------------------------------------------------------------*/
+
 .footer-main {
     padding: 70px 0px;
     background: #010101;
@@ -1943,13 +2004,6 @@ ul.cart-list>li.total>.btn:hover {
     padding-bottom: 20px;
 }
 
-
-/* .service-block-inner {
-  padding: 15px 20px;
-  position: relative;
-  margin-bottom: 30px;
-} */
-
 .about-box-main a {
     color: #ffffff;
     font-size: 18px;
@@ -1960,60 +2014,6 @@ ul.cart-list>li.total>.btn:hover {
 .about-box-main a.btn {
     padding: 12px 15px;
 }
-
-
-/* .service-block-inner::before {
-  content: "";
-  width: 100%;
-  height: 5px;
-  border-radius: 0px;
-  background: #000000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.5s ease 0s;
-} */
-
-
-/* .service-block-inner::after {
-  content: "";
-  width: 100%;
-  height: 0;
-  border-radius: 0px;
-  background: #1497dd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.5s ease 0s;
-}
-
-.service-block-inner h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.service-block-inner p {
-  margin: 0px;
-  font-size: 16px;
-  font-weight: 300;
-  padding-bottom: 0px;
-}
-
-.service-block-inner:hover::after {
-  height: 100%;
-}
-
-.service-block-inner:hover h3 {
-  color: #ffffff;
-  transition: all 0.5s ease 0s;
-}
-
-.service-block-inner:hover p {
-  color: #ffffff;
-  transition: all 0.5s ease 0s;
-} */
 
 
 /* Style pour les éléments de classe 'row' */
@@ -2100,10 +2100,19 @@ h3 {
 }
 
 .our-team {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
     position: relative;
-    transition: all 0.3s ease 0s;
+    width: 100%;
+    /* S'adapte à la largeur du conteneur */
+    height: 250px;
+    /* Hauteur fixe */
+    object-fit: cover;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .code_equipe {
@@ -2124,15 +2133,6 @@ h3 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.our-team img {
-    width: 100%;
-    /* S'adapte à la largeur du conteneur */
-    height: 200px;
-    /* Hauteur fixe */
-    object-fit: cover;
-    transition: all 0.3s ease-in-out 0s;
-}
-
 .our-team:hover img {
     opacity: 0.5;
 }
@@ -2149,11 +2149,41 @@ h3 {
     transition: all 0.3s ease 0s;
 }
 
-.our-team .title {
+.our-team h3.title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.our-team h3.title::before {
+    content: '';
     display: block;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 4px 0 7px 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff5733;
+    /* Ligne décorative sous le titre */
+    margin: 8px auto;
+}
+
+
+/* Ajouter une animation de survol */
+
+.our-team:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Barre de séparation */
+
+hr.my-0 {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .our-team .post {
@@ -2219,7 +2249,8 @@ h3 {
 
 .team-description p {
     font-size: 14px;
-    margin: 0px;
+    margin-left: 9px;
+    margin-right: 9px;
 }
 
 .hover-team:hover .social {
@@ -2252,6 +2283,119 @@ h3 {
 
 .hover-team .team-content .title {
     border-bottom: 2px solid #1497dd;
+}
+
+
+/*--------------------moi-team---------------------------*/
+
+.moi-team {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.moi-team:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.moi-team img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.moi-team:hover img {
+    opacity: 0.5;
+}
+
+.moi-team .team-content {
+    color: #000;
+    opacity: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #ffffff;
+    padding-left: 55px;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+}
+
+.moi-team .title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 4px 0 7px 0;
+}
+
+.moi-team .post {
+    display: block;
+    font-size: 15px;
+}
+
+.moi-team .social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 35px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
+    transition: all 0.3s ease 0s;
+}
+
+.moi-team:hover .social {
+    opacity: 1;
+}
+
+.moi-team .social li {
+    display: block;
+}
+
+.moi-team .social li a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: #000000;
+    font-size: 17px;
+    color: #fff;
+    opacity: 0.9;
+    position: relative;
+    transform: translate(35px, -35px);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.moi-team .social li a:hover {
+    width: 35px;
+    background: #1497dd;
+    transition-delay: 0s;
+}
+
+.moi-team .icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: #1497dd;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Styles pour les cartes d'image */
+
+.hover-team {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-team:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .shop-box-inner {
@@ -3140,6 +3284,7 @@ h3 {
     /* Aligne le contenu verticalement */
     height: 100%;
     /* Permet à chaque blog-box de remplir l'espace disponible */
+    border: 1px solid #ccc;
     /* Optionnel : ajoute une bordure pour mieux voir les boîtes */
     border-radius: 5px;
     /* Optionnel : arrondit les coins */

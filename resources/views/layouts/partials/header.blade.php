@@ -32,6 +32,7 @@
         <link rel="apple-touch-icon" href="{{asset('assets/autoimages/logoremo.png')}}" style=" object-fit: cover;">
         <!-- Bootstrap CSS -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
         <!-- Site CSS -->
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -59,6 +60,29 @@
     </head>
   </head>
   <body>
+    <script>
+      function selectImage(element) {
+          // Enlever la classe 'selected' de toutes les images
+          const images = document.querySelectorAll('.hover-team');
+          images.forEach(img => img.classList.remove('selected'));
+          
+          // Ajouter la classe 'selected' à l'image cliquée
+          element.classList.add('selected');
+    
+          // Récupérer le titre et le paragraphe depuis les attributs data-title et data-paragraph
+          const title = element.getAttribute('data-title');
+          const paragraph = element.getAttribute('data-paragraph');
+    
+          // Mettre à jour le titre et le paragraphe avec les données récupérées
+          document.getElementById('description-title').innerText = title;
+          document.getElementById('description-paragraph').innerText = paragraph;
+    
+          // Afficher la section de description
+          document.getElementById('selected-description').style.display = 'block';
+      }
+    </script>
+    
+  
     @yield('contenu')
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>

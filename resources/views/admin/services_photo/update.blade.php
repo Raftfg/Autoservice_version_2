@@ -55,6 +55,14 @@
                     </select>
                 </div>
 
+                <div class="col-md-6">
+                    <label for="description" class="form-label">Description<span style="color: red">*</span> </label>
+                    <input type="text" class="form-control" required id="description" name="description">
+                    @if ($errors->has('description'))
+                        <p>{{ $errors->first('description')}}</p>
+                    @endif
+                </div>
+
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Modifier</button>
                 </div>

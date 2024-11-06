@@ -9,9 +9,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Bienvenue au garage <br>  Auto Service La Patience</strong></h1>
+                        <h1 class="m-b-20 typing"><strong>Bienvenue au Garage <br>  Auto Service La Patience</strong></h1>
                         <p class="m-b-40">Découvrez ce garage en temps réel où vous verrez les tendances et<br> les changements de performances au fil du temps.</p>
-                        <p><a class="btn hvr-hover " href="/rendezvous" style="font-size: 16px;">Prendre un rendez-vous</a></p>
+                        <p><a class="btn hvr-hover " href="/rendezvous" >Prendre un rendez-vous</a></p>
                     </div>
                 </div>
             </div>
@@ -21,9 +21,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Bienvenue au garage <br>  Auto Service La Patience</strong></h1>
+                        <h1 class="m-b-20 typing"><strong>Bienvenue au Garage <br>  Auto Service La Patience</strong></h1>
                         <p class="m-b-40">Découvrez ce garage en temps réel où vous verrez les tendances et<br> les changements de performances au fil du temps.</p>
-                        <p><a class="btn hvr-hover" href="/rendezvous"  style="font-size: 16px;">Prendre un rendez-vous</a></p>
+                        <p><a class="btn hvr-hover" href="/rendezvous"  >Prendre un rendez-vous</a></p>
 
                     </div>
                 </div>
@@ -35,9 +35,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Bienvenue au garage <br>  Auto Service La Patience</strong></h1>
-                        <p class="m-b-40">Découvrez ce garage en temps réel où vous verrez les tendances et<br> les changements de performances au fil du temps.</p>
-                        <p><a class="btn hvr-hover" href="/rendezvous" style="font-size: 16px;">Prendre un rendez-vous</a></p>
+                        <h1 class="m-b-20 typing" ><strong>Bienvenue au Garage <br>  Auto Service La Patience</strong></h1>
+                        <p class="m-b-40" >Découvrez ce garage en temps réel où vous verrez les tendances et<br> les changements de performances au fil du temps.</p>
+                        <p><a class="btn hvr-hover" href="/rendezvous" >Prendre un rendez-vous</a></p>
                     </div>
                 </div>
             </div>
@@ -54,14 +54,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="banner-frame"> <img class="img-fluid" src="{{asset('assets/autoimages/img33.jpg')}}" alt="" style=" object-fit: cover;" />
+                <div class="banner-frame"> <img class="img-fluid" src="{{asset('assets/autoimages/img33.jpg')}}" alt="" style=" object-fit: cover; 
+
+                           " />
                 </div>
             </div>
             <div class="col-lg-6">
                 <h2 class="noo-sh-title-top text-primary">Qui sommes-<span>nous?</span></h2>
-                <h3 class="text-justify">Votre véhicule est en panne ou bloqué suite à un accident ? Pas de panique !
-                     Nous intervenons en permanence sur site.
-                </h3>
+               
                 <p class="text-justify">
                     Notre société de dépannage de véhicule est née en 1996, créée par Issa TAKOU OROU GOURA, chef garagiste.
                     Notre cœur de métier cible le <strong>dépannage</strong>, la <strong>réparation 
@@ -78,7 +78,9 @@
                 </P>
                 <p class="text-justify">
                     Vous avez besoin d’une réparation, d’un contrôle, vous désirez assurer 
-                    la maintenance de votre véhicule, nous répondons à vos attentes dans les 
+                    la maintenance de votre véhicule, nous répondons à vos attentes dans les meilleures conditions avec sérieux et réactivité. N’hésitez pas à prendre contact avec nous,
+                    nous sommes 
+                    à votre entière disposition et à votre écoute entre 7h30 et 19h30. 
                 </p>
                  {{-- <a class="btn hvr-hover" href="#">Lire plus</a> --}}
             </div>
@@ -86,9 +88,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="text-justify">
-                    meilleures conditions avec sérieux et réactivité. N’hésitez pas à prendre contact avec nous,
-                     nous sommes 
-                     à votre entière disposition et à votre écoute entre 7h30 et 19h30. Nous nous déplaçons pour réaliser tous les contrôles nécessaires pour que votre véhicule passe le
+                  Nous nous déplaçons pour réaliser tous les contrôles nécessaires pour que votre véhicule passe le
                      contrôle technique sans encombre. Ensuite, nos techniciens établissent la liste des éventuelles 
                      réparations à réaliser. 
                      Vous prenez rendez-vous directement et à la date fixée, nous effectuons toutes les réparations.
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="row my-5" >
-            <div class="col-sm-6 col-lg-4">
+            <div class=" col-md-4">
                 <div class="service-block-inner">
                     <h3 class="bold-text">Vision et mission</h3>
                     <p class="text-justify">
@@ -120,7 +120,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class=" col-md-4">
                 <div class="service-block-inner">
                     <h3 class="bold-text">Objectifs</h3>
                     {{-- <p class="text-justify">
@@ -134,7 +134,7 @@
                    
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class=" col-md-4">
                 <div class="service-block-inner">
                     <h3 class="bold-text">Valeurs</h3>
                     <p class="text-justify">
@@ -148,16 +148,24 @@
                 </div>
             </div>
         </div>
-        <div class="row my-4">
+
+        <div class="row my-4 ">
             <div class="col-12">
-                <h2 class="noo-sh-title">Rencontrez notre équipe</h2>
+                <h2 class="noo-sh-title text-primary">Rencontrez notre équipe</h2>
                 <p class="text-justify renequipe" style="margin-top: -30px;">Expérience, dynamisme et courtoisie! Voilà qui décrit bien l'équipe de gestion et de mécanique d'ASP AUTO SERVICE LA PATIENCE. On peut dire en effet que TAKOU OROU GOURA Issa, chef garagiste a su bâtir une équipe multidisciplinaire de techniciens à la fois qualifiés et passionnés pour la mécanique automobile </p>
             </div>
             @forelse ($equipes as $equipe)
-                <div class="col-sm-6 col-lg-3 ">
-                    <div class="hover-team code_equipe">
-                        <div class="our-team"> 
-                            <img src="{{asset("equipes/" . $equipe->avatar)}}" alt=""class="equipe_avatar" />
+                <div class="col-md-4 ">
+                    <div class="hover-team code_equipe" style="box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);">
+                        <div class="moi-team "> 
+                            <img src="{{asset("equipes/" . $equipe->avatar)}}" alt=""class="equipe_avatar" style="
+                            width: 100%;
+                            max-width: 400px;
+                            height: auto;
+                            aspect-ratio: 4 / 5; /* Ratio portrait */
+                            object-fit: cover;
+                            border-radius: 8px;
+                           " />
                             <div class="team-content">
                                 <h3 class="title">{{ $equipe->nom }} {{ $equipe->prenom }}</h3>
                                 <span class="post">{{ $equipe->role }}</span>
@@ -191,7 +199,7 @@
         </div><br><br>
         <div class="row my-5">
             <div class="col-12">
-                <h2 class="noo-sh-title">Message du chef garagiste</h2>
+                <h2 class="noo-sh-title text-primary">Message du chef garagiste</h2>
                 <p class="text-justify" style="margin-top: -30px;"> « Chez Auto Service la Patience, nous mettons tout en œuvre pour assurer votre confort et votre sécurité lorsque vous conduisez votre véhicule. »</p>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-6">
@@ -251,8 +259,8 @@
 
          </div> --}}
        
-         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
+         <div class="row ">
+            <div class="col-xl-6 col-lg-6 col-md-6 ">
                 <div class="single-product-details">
                     <h4>POURQUOI NOUS CHOISIR?</h4>
                     <p class="text-justify"> Nos techniciens sont tous certifiés offrant des services personnalisés basés sur la communication et l’honnêteté. Nous possédons aussi un système              
@@ -283,30 +291,32 @@ votre batterie et son système de charge, votre radiateur et son système de ref
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Trucs et astuces</h1>
+                    <h1 class="text-primary">Trucs et astuces</h1>
                     <p>Nous vous présentons nos quelques articles .</p>
                 </div>
             </div>
         </div>
         <div class="row">
             @forelse ($articles as $article)
-                <div class="coblog-imgl-md-6 col-lg-4 col-xl-4">
+                <div class="coblog-imgl-md-6 col-md-4 my-3">
                     <div class="blog-box">
                         <div class="">
                             <img class="img-fluid " src="{{asset('articles/' . $article->photo)}}" alt="" style="
                             width: 100%; /* S'adapte à la largeur du conteneur */
                             height: 200px; /* Hauteur fixe */
+                            aspect-ratio: 4 / 5; /* Ratio portrait */
+
                             object-fit: cover; /* Conserve le ratio en recadrant l'image si nécessaire */
                         "/> 
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">
-                            <a href="#"><h3 class="ouib">{{ $article->titre }}</h3></a>
+                            <a href="{{ route('articlee.show', $article->id) }}"><h3 class="ouib">{{ $article->titre }}</h3></a>
                                 <p class="text-justify truncated">{{ $article->contenu }}</p>
                             </div>
                         </div>
                         <div class="text-center mt-2"> <!-- Centre le bouton -->
-                            <a href="{{ route('articles.show', $article->id) }}" class="btn-lire-plus">Lire plus</a>
+                            <a href="{{ route('articlee.show', $article->id) }}" class="btn-lire-plus">Lire plus</a>
                         </div>
                     </div>
                 </div>
@@ -319,8 +329,6 @@ votre batterie et son système de charge, votre radiateur et son système de ref
     </div>
 </div>
 <!-- End Blog  -->
-
-
 <!-- Start Instagram Feed  -->
 <div class="instagram-box">
     <div class="main-instagram owl-carousel owl-theme">

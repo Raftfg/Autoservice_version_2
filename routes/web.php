@@ -53,9 +53,10 @@ Route::post('/rendezvousform', [SiteController::class, 'rendezvousform'])->name(
 
 //devis
 Route::get('/devis', [SiteController::class, 'devis'])->name('devis');
+Route::post('/devisform', [SiteController::class, 'devisform'])->name('devisform');
 
 // routes/web.php
-Route::get('/articles/{id}', [ArticlesController::class, 'show'])->name('articles.show');
+Route::get('/articlee/{id}', [ArticlesController::class, 'show'])->name('articlee.show');
 
 
 

@@ -9,25 +9,26 @@
                         <option>$ USD</option>
                         <option>€ EUR</option>
                     </select>
-                </div> --}}
+                </div>--}} 
                 <div class="right-phone-box">
-                    <p>Appelez-nous:- <a href="#"> +229 95-95-13-47 / 97-48-91-91</a></p>
+                    <p>Appelez-nous:- <a href="#"> +229 95 95 13 47</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
                         <li><a href="#"><i class="fa fa-user s_color"></i> Mon compte</a></li>
                         <li><a href="/rendezvous" target="_blank"><i class="fas fa-location-arrow"></i> Rendez-vous</a></li>
-                        <li><a href="/contacteznous"><i class="fas fa-headset"></i> Contactez-nous</a></li>
+                        <li><a href="/devis"><i class="fas fa-file-invoice-dollar"></i> Demandez un devis</a></li>
+                        {{--<li><a href="/contacteznous"><i class="fas fa-headset"></i> Contactez-nous</a></li>--}}
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                {{-- <div class="login-box">
+                <div class="login-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
                         <option>Inscrivez-vous</option>
                         <option>Se connecter</option>
                     </select>
-                </div> --}}
+                </div>
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
@@ -73,7 +74,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-                <a class="navbar-brand" href="/accueil"><img src="{{asset('assets/autoimages/logoremo.png')}}" class="logo" alt="" style="max-height:70px; margin-right:6px; object-fit: cover;"></a>
+                <a class="navbar-brand" href="/accueil"><img src="{{asset('assets/autoimages/logoremo.png')}}" class="logo" alt=""style="max-height:70px; margin-right:6px; object-fit: cover;" ></a>
             </div>
             <!-- End Header Navigation -->
 
@@ -82,13 +83,24 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item {{ Route::is('accueil') ? 'active' : '' }}"><a class="nav-link" href="/accueil">Accueil</a></li>
                     <li class="dropdown {{ Route::is('service') ? 'active' : '' }}">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Nos services</a>
-                        <ul class="dropdown-menu" style="width:225px;">
+                       {{-- <i class="fas fa-caret-down">  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nos services</a></i>
+                        <ul class="dropdown-menu"  style="width:225px;">
                             @foreach ($services as $service)
                                 <li><a href="/service/{{ $service->id }}">{{ $service->designation }}</a></li>
                             @endforeach
+                        </ul>--}}
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            Nos services <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="width:225px;">
+                            @foreach ($services as $service)
+                                <li><a href="/service/{{ $service->id }}" class="dropdown-item">{{ $service->designation }}</a></li>
+                            @endforeach
                         </ul>
                     </li>
+                    
                     <li class="nav-item {{ Route::is('equipe') ? 'active' : '' }}"><a class="nav-link" href="/equipe">Equipe</a></li>
                     <li class="nav-item {{ Route::is('gallery') ? 'active' : '' }}"><a class="nav-link" href="/gallery">Galleries</a></li>
                     <li class="nav-item {{ Route::is('localisation') ? 'active' : '' }}"><a class="nav-link" href="/localisation">Localisation</a></li>
@@ -99,6 +111,24 @@
         </div>
     </nav>
     <!-- End Navigation -->
+    <style>
+.dropdown-menu {
+    width: 225px;
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    padding: 8px 15px;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+
+    </style>
 </header>
 <!-- Start Top Search -->
 <div class="top-search">

@@ -41,3 +41,4 @@ Route::middleware(['auth'])->group(function () {
     
 
 });
+Route::resource('/admin/articlee',ArticlesController::class);

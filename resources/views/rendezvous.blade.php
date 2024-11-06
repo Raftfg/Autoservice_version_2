@@ -25,13 +25,12 @@
                     <div class="contact-form-right">
                         <h2>Rendez-vous</h2>
                              <div class="" style="font-size: 30px; text-align:center; font-weight:bold;">
-                                Veuillez noter que l’heure choisie est l’heure à laquelle  <br> vous prévoyez nous laisser votre 
-                                véhicule et non l’heure à laquelle nous <br> compléterons les réparations.
+                            
+                                Veuillez noter que l’heure choisie correspond <br> à celle de la remise de votre véhicule et <br> non à celle de la fin des réparations.
                             </div>
                             <br>
                             <div class="" style="font-size: 30px; text-align:center;">
-                                Vous recevrez une confirmation de rendez-vous par courriel ou par <br> texto.
-                                 Veuillez nous contacter au +229 9595 1347 si vous ne recevez <br> pas votre confirmation.
+                                Vous recevrez une confirmation de rendez-vous par courriel ou par message <br> texte. Si vous ne la recevez pas,  n’hésitez pas à nous contacter  au <br> +229 9595 1347.
                                  <p><a href="/rendezvoustraite" class="btn btn-outline-primary text-center" >J'ai compris!</a></p>
                             </div> 
                             

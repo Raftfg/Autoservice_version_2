@@ -3,13 +3,13 @@
     <div class="footer-main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4 ">
                     <div class="footer-top-box">
                         <h3>Temps de travail</h3>                        <ul class="list-time">
                             <li>Lundi - Samedi: 07H30 à 19H30</li> <li>Dimanche: <span>Fermé </span></li>                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4">
                     <div class="footer-top-box">
                         <h3>Abonnez-vous</h3>
                         <form class="newsletter-box" action="/layouts.partials.footer" method="POST">
@@ -25,7 +25,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4">
                     <div class="footer-top-box">
                         <h3>Des médias sociaux</h3>
                         <p><ul class="list-time">
@@ -40,13 +40,13 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4">
                     <div class="footer-widget">
                         <h4>AUTO SERVICE LA PATIENCE</h4>
                         <p class="text-white">Nous sommes toujours disponible pour vous. Votre satisfaction est notre bien-être.</p>
                                            </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4">
                     <div class="footer-link">
                         <h4>Informations utiles</h4>
                         <ul>
@@ -59,7 +59,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-md-4">
                     <div class="footer-link-contact">
                         <h4>Contactez-nous</h4>
                         <ul>

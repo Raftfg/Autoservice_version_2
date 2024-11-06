@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Devis;
+use App\Models\Equipes;
+use App\Models\Articles;
 use App\Models\Contacts;
 use App\Models\Services;
 use App\Mail\ContactMail;
 use App\Models\Newsletters;
 use App\Models\Rendez_vous;
 use App\Mail\RendezvousMail;
-use App\Models\Articles;
-use App\Models\Equipes;
 use Illuminate\Http\Request;
 use App\Models\Services_photo;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class SiteController extends Controller
 {
@@ -87,7 +89,7 @@ class SiteController extends Controller
     }
 
     //rendez-vous
-    public function rendezvousform(Request $request)
+    /*public function rendezvousform(Request $request)
     {
         $rendezvous = Rendez_vous::create([
             'motif' => $request->motif,
@@ -104,15 +106,46 @@ class SiteController extends Controller
         $services = Services::all();
         // $today = date('y-m-d');
         return;
-
-
-
-
-
-
-
         view('rendezvoustraite', compact('services'));
+    }*/
+    public function rendezvousform(Request $request)
+    {
+        // Valider les données d'entrée
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+            'motif' => 'required|string|max:255',
+            'heure' => 'nullable|string|max:255',
+            'entreprise' => 'nullable|string|max:255',
+            'nom' => 'required|string|max:255',
+            'telephone' => 'required|string|max:20',
+            'message' => 'required|string|max:255',
+            'date_rendez_vous' => 'required|date',
+        ], [
+            // Messages d'erreur personnalisés (optionnels)
+            'email.required' => 'L\'adresse email est obligatoire.',
+            'email.email' => 'L\'adresse email doit être valide.',
+            'motif.required' => 'Le motif du rendez-vous est obligatoire.',
+            'nom.required' => 'Votre nom est obligatoire.',
+            'telephone.required' => 'Votre numéro de téléphone est obligatoire.',
+            'message.required' => 'Veuillez décrire le problème de votre véhicule.',
+            'date_rendez_vous.required' => 'La date du rendez-vous est obligatoire.',
+            'date_rendez_vous.date' => 'La date doit être valide.',
+        ]);
+    
+        // Créer un nouveau rendez-vous
+        $rendezvous = Rendez_vous::create($validatedData);
+    
+        // Envoi de l'email
+        Mail::to('raftak99@gmail.com')->send(new RendezvousMail());
+    
+        // Récupérer les services pour l'affichage
+        $services = Services::all();
+    
+        // Retourner la vue avec les données
+        return view('rendezvoustraite', compact('services'));
     }
+    
+
 
     //devis
     public function devis()
@@ -120,6 +153,33 @@ class SiteController extends Controller
         $services = Services::all();
         return view('devis', compact('services'));
     }
+
+
+    public function devisform(Request $request)
+{
+    // Validation des champs
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|string|max:255',
+        'entreprise' => 'nullable|string|max:255',
+        'email' => 'required|email|unique:devis|max:255',
+        'numero' => 'required|string|max:15',
+        'prestation' => 'required|string',
+        'messages' => 'required|string|max:500',
+    ]);
+
+    // Vérifier les erreurs de validation
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput()
+            ->with('error', 'Veuillez corriger les erreurs et réessayer.');
+    }
+
+    // Traitement des données (sauvegarde)
+    Devis::create($request->all());
+
+    return redirect()->back()->with('success', 'Votre demande a été envoyée avec succès.Nous vous répondons bientôt!');
+}
 
     //contactez
     public function contactez(Request $request)

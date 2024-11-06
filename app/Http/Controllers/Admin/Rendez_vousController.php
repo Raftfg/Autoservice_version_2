@@ -49,6 +49,8 @@ class Rendez_vousController extends Controller
         ]);
         return redirect()->route('rendez_vous.index');
     }
+   
+
 
     /**
      * Display the specified resource.

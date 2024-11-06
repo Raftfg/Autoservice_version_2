@@ -32,10 +32,13 @@
                                             $i = 0
                                         @endphp
                                         <th scope="col">N°</th>
-                                        <th scope="col">Désignation</th>
                                         <th scope="col">Photo</th>
-                                        {{-- <th scope="col">Prix</th> --}}
+                                        <th scope="col">Désignation</th>
+                                        <th scope="col">Description</th>
                                         <th scope="col">Service</th>
+                                      
+                                        {{-- <th scope="col">Prix</th> --}}
+                                        
                                         <th scope="col">Date de creation</th>
                                         <th scope="col">Actions</th>
                                     </tr>
@@ -48,12 +51,20 @@
                                             @endphp
 
                                             <td>{{ $i }}</td>
-                                            <td>{{ $var->designation_sous_service }}</td>
                                             <td>
                                                 <img src="{{ asset('services_photo/'.$var->photo)}}" width="60px" alt="" srcset="">
                                             </td>
-                                            {{-- <td>{{ $var->prix }}</td> --}}
+                                            <td >{{ $var->designation_sous_service }}</td>
+                                            <td class="text-justify">{{ $var->description }}</td>
                                             <td>{{ $var->services->designation }}</td>
+                                          
+                                           
+                                            
+                                            
+                                          
+                                            {{-- <td>{{ $var->prix }}</td> --}}
+                                           
+                                          
                                             <td>{{ $var->created_at }}</td>
                                             <td>
                                                 <a class="btn btn-info" href="{{route('services_photo.edit',[$var->id])}}">Modifier</a>

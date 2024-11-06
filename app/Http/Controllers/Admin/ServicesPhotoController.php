@@ -43,6 +43,7 @@ class ServicesPhotoController extends Controller
         $request->photo->move(public_path('services_photo'), $photo);
         $photo = Services_photo::create([
             'designation_sous_service' => $request->designation,
+            'description' => $request->description,
             'photo' => $photo,
             'id_service' => $request->service,
             'prix' => 0
@@ -89,6 +90,7 @@ class ServicesPhotoController extends Controller
         // dd($request);
         $photo->update([
             'designation_sous_service' => $request->designation,
+            'description' => $request->description,
             'photo' => $photoN,
             'id_service' => $request->service,
             'prix' => 0

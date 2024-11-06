@@ -1,78 +1,62 @@
 @extends('layouts.partials.header')
 @section('contenu')
 @include('layouts.partials.sidebar')
-
     <!-- Start All Title Box -->
-    <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>{{ $service->designation }}</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Nos prestations</a></li>
-                        <li class="breadcrumb-item active">{{ $service->designation }}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- End All Title Box -->
-
-    <!-- Start Shop Detail  -->
-    <div class="about-box-main">
-        <div class="container">
-            <div class="row my-4">
-                <div class="col-12">
-                    <div class="title-all text-center">
-                        <h1>{{ $service->designation }}</h1>
-                        <p>Vous êtes à la recherche de professionnels en mécanique automobile pour régler un problème avec votre véhicule?</p>
-                    </div>
-                </div>
-    
-                @foreach ($photos as $photo)
-                <div class="col-md-4">
-                    <div class="hover-team" onclick="selectImage(this)" 
-                         data-title="{{ $photo->designation_sous_service }}" 
-                         data-paragraph="{{ $photo->description }}">
-                        <div class="our-team"> 
-                            <img src="{{ '/services_photo/' . $photo->photo}}" alt="" style="width: 400px; 
-                            height: 200px; 
-                            aspect-ratio: 4 / 5; /* Ratio portrait */
-                            object-fit: cover;" />
-                            <div class="text-center">
-                                <h3 class="title">{{ $photo->designation_sous_service }}</h3> 
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="my-0"> 
-                </div>
-                @endforeach
-            </div>
-            
-            <div class="text-center" style="margin-left:15px;">
-                {{ $photos->links() }}
-            </div>
-            
-            <div id="selected-description" style="display: none; text-align: center; margin-top: 20px;">
-                <h3 id="description-title" style="font-weight: bold; text-align: center;"></h3>
-                <p id="description-paragraph"class="text-justify"></p>
-            </div>
-        </div>
-    </div>
-    
-    <style>
-        .hover-team {
-            cursor: pointer;
-        }
-        .selected {
-            border: 2px solid blue;
-            border-radius: 5px;
-        }
-    </style>
-    
-    
+    <!-- Start Contact Us  -->
+    <div class="all-title-box">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h2>Détail Article</h2>
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/accueil">Accueil</a></li>
+                      <li class="breadcrumb-item active">Détail Article</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="contact-box-main " style="background-color: #f9f9f9;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                  <div class="">
+                      <div class="container">
+                          <div class="row justify-content-center">
+                              <div class="col-md-12">
+                                  
+                                  <div class="article-detail bg-white rounded shadow-sm" >
+                                      <!-- Titre de l'article -->
+                                      <h1 class="font-weight-bold" style="font-family: 'Roboto', sans-serif; font-size: 28px; color: #222; margin-bottom: 15px; padding-top:5px; padding-left:5px;">{{ $article->titre }}</h1>
+                                      
+                                      <!-- Image de l'article -->
+                                      <div class="article-image mb-4">
+                                          <img src="{{ asset('articles/' . $article->photo) }}" alt="{{ $article->titre }}" class="img-fluid rounded" style="width: 100%; height: 400px; object-fit: cover; border: 1px solid #ccc;">
+                                      </div>
+                                      
+                                      <!-- Contenu de l'article -->
+                                      <div class="article-content" style="font-size: 16px; line-height: 1.8; color: #555;">
+                                          <p style="text-align: justify; padding-left:12px; padding-right:12px">{{ $article->contenu }}</p>
+                                      </div>
+                                      
+                                      <!-- Bouton Retour -->
+                                      <div class="text-center " style="padding-top: 10px; padding-bottom:10px;">
+                                          <a href="{{ url()->previous() }}" class="btn btn-secondary" style="font-size: 16px; padding: 10px 20px; font-weight: 500;">&larr; Retour</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>     
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
     <!-- End Cart -->
-<!-- Start Instagram Feed  -->
+
+    <!-- Start Instagram Feed  -->
 <div class="instagram-box">
     <div class="main-instagram owl-carousel owl-theme">
         <div class="item">
@@ -160,4 +144,3 @@
 <!-- End Instagram Feed  -->
     @include('layouts.partials.footer')
     @endsection
-    

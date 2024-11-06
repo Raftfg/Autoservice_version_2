@@ -61,7 +61,7 @@ class ArticlesController extends Controller
     public function show($id)
     {   $services = Services::all();
         $article = Articles::findOrFail($id);
-        return view('admin.articles.show', compact('article','services')); // Notez le chemin 'admin.articles.show'
+        return view('admin.articlee.show', compact('article','services')); // Notez le chemin 'admin.articles.show'
     }
 // app/Http/Controllers/ArticleController.php
 
