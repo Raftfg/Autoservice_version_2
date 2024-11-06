@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Newsletter</title>
-</head>
-<body>
-    <h1>Bonjour !</h1>
-    <p>Voici votre newsletter mensuelle avec toutes les nouvelles de notre site.</p>
-    <!-- Ajoute ici le contenu de la newsletter -->
-    <p>Merci de vous être inscrit !</p>
-</body>
-</html>
+@component('mail::message')
+
+{{-- Logo --}}
+{{-- <img src="{{ $logoUrl }}" alt="Logo" style="width: 150px; margin-bottom: 20px;"> --}}
+
+{{-- Titre --}}
+# Bonjour et bienvenue dans notre Newsletter !
+
+{{-- Contenu principal --}}
+{{ $content }}
+
+@component('mail::button', ['url' => url(''), 'color' => 'primary'])
+Visitez notre site
+@endcomponent
+
+Merci de votre confiance,<br>
+{{ config('app.name') }}
+
+@endcomponent

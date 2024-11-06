@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Newsletters;
+use App\Notifications\NewsletterNotification;
 use Illuminate\Http\Request;
 
 class NewslettersController extends Controller
