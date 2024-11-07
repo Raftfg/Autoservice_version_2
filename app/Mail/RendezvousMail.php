@@ -9,50 +9,24 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+;
+
 class RendezvousMail extends Mailable
 {
     use Queueable, SerializesModels;
+    
+    public $data;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function __construct($data)
     {
+        $this->data = $data;
     }
 
-    /**
-     * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
-     */
-    public function envelope()
+    public function build()
     {
-        return new Envelope(
-            subject: "Reception d'une demande de rendez-vous"
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
-     */
-    public function content()
-    {
-        return new Content(
-            view: '/rendezvousmail',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array
-     */
-    public function attachments()
-    {
-        return [];
+        return $this->from(env('MAIL_FROM_ADDRESS'))  // Utilisation de l'adresse configurée dans .env
+                    ->subject("Garage Auto Service La Patience")
+                    ->view('rendezvousmail')  // Vue de l'email
+                    ->with('data', $this->data);  // Passer les données à la vue
     }
 }

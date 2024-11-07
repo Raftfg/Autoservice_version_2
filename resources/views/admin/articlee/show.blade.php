@@ -37,7 +37,7 @@
                                       
                                       <!-- Contenu de l'article -->
                                       <div class="article-content" style="font-size: 16px; line-height: 1.8; color: #555;">
-                                          <p style="text-align: justify; padding-left:12px; padding-right:12px">{{ $article->contenu }}</p>
+                                          <p class="te" style="padding-left:12px; padding-right:12px">{{ $article->contenu }}</p>
                                       </div>
                                       
                                       <!-- Bouton Retour -->

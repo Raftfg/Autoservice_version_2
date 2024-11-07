@@ -83,12 +83,6 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item {{ Route::is('accueil') ? 'active' : '' }}"><a class="nav-link" href="/accueil">Accueil</a></li>
                     <li class="dropdown {{ Route::is('service') ? 'active' : '' }}">
-                       {{-- <i class="fas fa-caret-down">  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nos services</a></i>
-                        <ul class="dropdown-menu"  style="width:225px;">
-                            @foreach ($services as $service)
-                                <li><a href="/service/{{ $service->id }}">{{ $service->designation }}</a></li>
-                            @endforeach
-                        </ul>--}}
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">

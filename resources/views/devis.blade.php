@@ -46,14 +46,14 @@
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <div class="contact-form-right #survey-form">
-                        <h2 class="text-center">FORMULAIRE DE DEMANDE DE <span style="color: #226be2;">DEVIS</span></h2>
+                        <h2 class="text-center form-title">FORMULAIRE DE DEMANDE DE <span style="color: #1497dd;">DEVIS</span></h2>
                         <form action="/devisform" method="POST">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name">Nom</label> <span style="color: red;">*</span>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom..." style="border: 2px solid blue;" >
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom..." style="border: 1px solid #1497dd;" >
                                         @if ($errors->has('name'))
                                             <p class="alert alert-danger">{{ $errors->first('name') }}</p>
                                         @endif
@@ -62,7 +62,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="ent">Entreprise</label>
-                                        <input type="text" class="form-control" id="ent" name="entreprise" placeholder="Facultatif..." style="border: 2px solid blue;">
+                                        <input type="text" class="form-control" id="ent" name="entreprise" placeholder="Facultatif..." style="border: 1px solid #1497dd;">
                                         @if ($errors->has('entreprise'))
                                             <p class="alert alert-danger">{{ $errors->first('entreprise') }}</p>
                                         @endif
@@ -71,7 +71,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email">E-mail</label> <span style="color: red;">*</span>
-                                        <input type="email" placeholder="Votre email" id="email" class="form-control" name="email" style="border: 2px solid blue;" >
+                                        <input type="email" placeholder="Votre email" id="email" class="form-control" name="email" style="border: 1px solid #1497dd;" >
                                         @if ($errors->has('email'))
                                             <p class="alert alert-danger">{{ $errors->first('email') }}</p>
                                         @endif
@@ -80,7 +80,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="numero">Téléphone</label> <span style="color: red;">*</span>
-                                        <input type="tel" placeholder="Téléphone" id="numero" class="form-control" name="numero" style="border: 2px solid blue;" >
+                                        <input type="tel" placeholder="Téléphone" id="numero" class="form-control" name="numero" style="border: 1px solid #1497dd;" >
                                         @if ($errors->has('numero'))
                                             <p class="alert alert-danger">{{ $errors->first('numero') }}</p>
                                         @endif
@@ -89,7 +89,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="pres">Service souhaité</label> <span style="color: red;">*</span> <br>
-                                        <select name="prestation" id="pres" class="form-control" style="border: 2px solid blue; min-height: 40px;" >
+                                        <select name="prestation" id="pres" class="form-control" style="border: 1px solid #1497dd; min-height: 40px;" >
                                             <option value="">Choisir services</option>
                                             <option value="Service - Vidange d'Huile Régulier">Service - Vidange d'Huile Régulier</option>
                                             <option value="Service - Vidange d'Huile Synthétique">Service - Vidange d'Huile Synthétique</option>
@@ -120,7 +120,7 @@
                                 <div class="col-md-12">
                                     <label for="message">Votre message</label> <span style="color: red;">*</span> <br>
                                     <div class="form-group">
-                                        <textarea class="form-control" id="message" name="messages" placeholder="Votre Message" rows="4" style="border: 2px solid blue;" ></textarea>
+                                        <textarea class="form-control" id="message" name="messages" placeholder="Votre Message" rows="4" style="border: 1px solid #1497dd;" ></textarea>
                                         @if ($errors->has('messages'))
                                             <p class="alert alert-danger">{{ $errors->first('messages') }}</p>
                                         @endif

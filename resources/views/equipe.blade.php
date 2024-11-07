@@ -25,7 +25,7 @@
                     <h2 class="noo-sh-title">Rencontrez notre équipe </h2>
                 </div>
                 @forelse ($equipes as $equipe)
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="col-12 col-md-3 mb-4">
                         <div class="hover-team">
                             <div class="our-team"> 
                                 <img src="{{asset("equipes/" . $equipe->avatar)}}" alt="" class="img_insta" />

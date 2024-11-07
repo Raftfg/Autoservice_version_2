@@ -108,6 +108,8 @@ class SiteController extends Controller
         return;
         view('rendezvoustraite', compact('services'));
     }*/
+ 
+
     public function rendezvousform(Request $request)
     {
         // Valider les données d'entrée
@@ -121,7 +123,7 @@ class SiteController extends Controller
             'message' => 'required|string|max:255',
             'date_rendez_vous' => 'required|date',
         ], [
-            // Messages d'erreur personnalisés (optionnels)
+            // Messages d'erreur personnalisés
             'email.required' => 'L\'adresse email est obligatoire.',
             'email.email' => 'L\'adresse email doit être valide.',
             'motif.required' => 'Le motif du rendez-vous est obligatoire.',
@@ -132,18 +134,42 @@ class SiteController extends Controller
             'date_rendez_vous.date' => 'La date doit être valide.',
         ]);
     
-        // Créer un nouveau rendez-vous
-        $rendezvous = Rendez_vous::create($validatedData);
+        try {
+            // Créer un nouveau rendez-vous dans la base de données
+            $rendezvous = Rendez_vous::create($validatedData);
     
-        // Envoi de l'email
-        Mail::to('raftak99@gmail.com')->send(new RendezvousMail());
+            // Créer les données à envoyer dans l'email
+            $data = [
+                'nom' => $validatedData['nom'],
+                'email' => $validatedData['email'],
+                'telephone' => $validatedData['telephone'],
+                'motif' => $validatedData['motif'],
+                'date_rendez_vous' => $validatedData['date_rendez_vous'],
+                'heure' => $validatedData['heure'] ?? 'Non spécifié',
+                'entreprise' => $validatedData['entreprise'] ?? 'Non spécifié',
+                'message' => $validatedData['message'],
+                'administration' => 'Issa TAKOU OROU GOURA',
+            ];
     
-        // Récupérer les services pour l'affichage
-        $services = Services::all();
+           // dd($data);
+            // Envoi de l'email
+            Mail::to('raftak99@gmail.com')->send(new RendezvousMail($data));
     
-        // Retourner la vue avec les données
-        return view('rendezvoustraite', compact('services'));
+            // Vérifier si l'email a bien été envoyé
+            if (Mail::failures()) {
+                return back()->withErrors(['error' => 'Échec de l\'envoi de l\'email.']);
+            }
+    
+            // Retourner un message de succès
+            return redirect()->back()->with('success', 'Votre demande de rendez-vous a été envoyée avec succès.');
+        } catch (\Exception $e) {
+            // Gestion des erreurs si l'email échoue
+            return back()->withErrors(['error' => 'Erreur lors de l\'envoi de l\'email : ' . $e->getMessage()]);
+        }
     }
+    
+    
+
     
 
 
